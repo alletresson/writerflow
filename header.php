@@ -20,7 +20,7 @@
                     if (get_theme_mod('writertheme_menu_text_setting')) {
                         echo esc_url(get_theme_mod('writertheme_menu_text_setting'));
                     } else {
-                        echo esc_html__('Menu', 'writer-theme');
+                        echo esc_html__('Menu', 'writerflow');
                     } ?>
                     <span></span>
                 </a>

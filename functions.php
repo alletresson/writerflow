@@ -12,7 +12,7 @@ if ( ! function_exists( 'writertheme_setup' ) ) {
 	function writertheme_setup() {
 		// Menus
 		register_nav_menus( array(
-			'primary' => __( 'Primary Menu', 'writer-theme' ),
+			'primary' => __( 'Primary Menu', 'writerflow' ),
 		) );
 
 		// Add theme support
@@ -43,7 +43,7 @@ if ( ! function_exists( 'writertheme_setup' ) ) {
 		add_image_size( 'article', 580, 700, true );
 
 		// Available for translation
-		load_theme_textdomain( 'writer-theme', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'writerflow', get_template_directory() . '/languages' );
 	}
 }
 add_action( 'after_setup_theme', 'writertheme_setup' );
@@ -52,7 +52,7 @@ add_action( 'after_setup_theme', 'writertheme_setup' );
 
 function writertheme_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'writer-theme' ),
+		'name'          => __( 'Sidebar', 'writerflow' ),
 		'id'            => 'sidebar',
 		'description'   => '',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',

@@ -5,7 +5,7 @@
             <h4 class="widget-title"><?php echo esc_html(get_theme_mod('writertheme_related_title_setting')); ?></h4>
 
         <?php } else { ?>
-            <h4 class="widget-title"><?php _e('You might also like', 'writer-theme'); ?></h4>
+            <h4 class="widget-title"><?php _e('You might also like', 'writerflow'); ?></h4>
             <?php
         }
         ?>

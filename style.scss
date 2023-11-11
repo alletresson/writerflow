@@ -1,14 +1,14 @@
 /*!
-Theme Name: Writer Theme
-Theme URI: https://writertheme.com
+Theme Name: Writerflow
+Theme URI: https://github.com/alletresson/writerflow
 Author: Alle
-Author URI: https://alletresson
+Author URI: https://alletresson.com
 Copyright: ©2023 alletresson.com
 Version: 1.0
-Text Domain: writer-theme
-Description: The theme for story writers.
+Text Domain: writerflow
+Description: The theme for story writerflow.
 Requires at least: 6.0
-Tested up to: 6.4.1
+Tested up to: 6.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
@@ -16,38 +16,29 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 */
 
 @font-face {
-  font-family: 'Messer';
-  src: url('assets/fonts/Messer-Regular.woff2') format('woff2'),
-  url('assets/fonts/Messer-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Vollkorn Italic';
+  src: url('assets/fonts/Vollkorn-Italic-VariableFont_wght.ttf');
 }
 
 @font-face {
-  font-family: 'Messer';
-  src: url('assets/fonts/Messer-Italic.woff2') format('woff2'),
-  url('assets/fonts/Messer-Italic.woff') format('woff');
-  font-weight: normal;
-  font-style: italic;
+  font-family: 'Vollkorn';
+  src: url('assets/fonts/Vollkorn-VariableFont_wght.ttf');
 }
 
 @font-face {
-  font-family: 'ArticulatCF';
-  src: url('assets/fonts/ArticulatCF-Bold.woff2') format('woff2'),
-  url('assets/fonts/ArticulatCF-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
+  font-family: 'Inter';
+  src: url('assets/fonts/Inter.ttf');
 }
 
 //- General
 
 html {
   font-size: 20px;
-  --font: 'Messer', serif;
-  --font-sans: 'ArticulatCF', Roboto, -apple-system, sans-serif;
+  --font: 'Vollkorn', serif;
+  --font-sans: 'Inter', Roboto, -apple-system, sans-serif;
   --c-text: hsl(0, 0%, 12%);
   --c-title: hsl(0, 0%, 9%);
-  --c-accent-1: hsl(191, 80%, 96%);
+  --c-accent-1: hsl(191, 80%, 93%);
   --c-accent-2: hsl(66, 100%, 90%);
   --c-bg: hsl(0, 0%, 96%);
 
@@ -104,7 +95,8 @@ body {
   margin: 0;
   font-size: 1rem;
   font-family: var(--font);
-  line-height: 1.8;
+  font-variation-settings: 'wght' 400;
+  line-height: 1.7;
   color: var(--c-text);
   overflow-x: hidden;
   font-weight: normal;
@@ -126,6 +118,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--c-title);
+  font-variation-settings: 'wght' 900;
   margin: 1em 0 0.5em 0;
   line-height: 1.4;
   font-weight: bold;
@@ -161,7 +154,7 @@ strong, b, dt {
 }
 
 em, i {
-  font-family: var(--font);
+  font-family: 'Vollkorn Italic', var(--font);
   font-style: italic;
 }
 
@@ -565,10 +558,10 @@ a.entry-thumbnail {
     font-size: 4.3rem;
     float: left;
     line-height: 1;
-    padding: 0 1.5rem 0 0;
+    padding: 10px 1.5rem 20px 0;
     margin: 5px 0 0;
-    -webkit-text-stroke: 1px #333;
-    -webkit-text-fill-color: transparent;
+    font-variation-settings: 'wght' 600;
+    font-family: var(--font-sans);
   }
 
   a:not(.link-button):not(.nav-caps) {
@@ -757,6 +750,7 @@ aside {
 
 #intro {
   font-size: 2rem;
+  padding: 1rem 0.5rem 1rem 1.5rem;
   margin-bottom: 2rem;
   background: var(--c-accent-1);
 }

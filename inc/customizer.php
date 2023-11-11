@@ -7,7 +7,7 @@ function writertheme_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'writertheme_texts_section',
 		array(
-			'title'    => __( 'Theme Texts', 'writer-theme' ),
+			'title'    => __( 'Theme Texts', 'writerflow' ),
 			'priority' => 1,
 		)
 	);
@@ -25,44 +25,11 @@ function writertheme_customize_register( $wp_customize ) {
 			$wp_customize,
 			'writertheme_menu_text_control',
 			array(
-				'label'         => __( 'Menu text', 'writer-theme' ),
-				'description'   => __( 'Default is Menu', 'writer-theme' ),
+				'label'         => __( 'Menu text', 'writerflow' ),
+				'description'   => __( 'Default is Menu', 'writerflow' ),
 				'section'       => 'writertheme_texts_section',
 				'settings'      => 'writertheme_menu_text_setting',
 				'type'          => 'text',
-			)
-		)
-	);
-
-	// Theme Dark Mode
-
-	$wp_customize->add_section(
-		'writertheme_dark_mode_section',
-		array(
-			'title'    => __( 'Theme Dark Mode', 'writer-theme' ),
-			'priority' => 2,
-		)
-	);
-
-	$wp_customize->add_setting(
-		'writertheme_dark_mode_setting',
-		array(
-			'sanitize_callback' => 'sanitize_text_field',
-			'transport'         => 'refresh',
-			'default'           => false,
-		)
-	);
-
-	$wp_customize->add_control(
-		new WP_Customize_Control(
-			$wp_customize,
-			'writertheme_dark_mode_control',
-			array(
-				'label'         => __( 'Dark Mode', 'writer-theme' ),
-				'description'   => __( 'Check to activate Dark Mode', 'writer-theme' ),
-				'section'       => 'writertheme_dark_mode_section',
-				'settings'      => 'writertheme_dark_mode_setting',
-				'type'          => 'checkbox',
 			)
 		)
 	);
@@ -72,7 +39,7 @@ function writertheme_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'writertheme_social_media_section',
 		array(
-			'title'    => __( 'Social Media Icons', 'writer-theme' ),
+			'title'    => __( 'Social Media Icons', 'writerflow' ),
 			'priority' => 3,
 		)
 	);
@@ -90,7 +57,7 @@ function writertheme_customize_register( $wp_customize ) {
         new WP_Customize_Control(
             $wp_customize, 'writertheme_social_media_instagram_control',
             array(
-                'label'    => __( 'Instagram URL', 'writer-theme' ),
+                'label'    => __( 'Instagram URL', 'writerflow' ),
                 'section'  => 'writertheme_social_media_section',
                 'settings' => 'writertheme_social_media_instagram_setting',
                 'type'     => 'text',
@@ -112,7 +79,7 @@ function writertheme_customize_register( $wp_customize ) {
             $wp_customize,
             'writertheme_social_media_youtube_control',
             array(
-                'label'    => __( 'YouTube URL', 'writer-theme' ),
+                'label'    => __( 'YouTube URL', 'writerflow' ),
                 'section'  => 'writertheme_social_media_section',
                 'settings' => 'writertheme_social_media_youtube_setting',
                 'type'     => 'text',
@@ -133,7 +100,7 @@ function writertheme_customize_register( $wp_customize ) {
         new WP_Customize_Control(
             $wp_customize, 'writertheme_social_media_pinterest_control',
             array(
-                'label'    => __( 'Pinterest URL', 'writer-theme' ),
+                'label'    => __( 'Pinterest URL', 'writerflow' ),
                 'section'  => 'writertheme_social_media_section',
                 'settings' => 'writertheme_social_media_pinterest_setting',
                 'type'     => 'text',
@@ -155,7 +122,7 @@ function writertheme_customize_register( $wp_customize ) {
             $wp_customize,
             'writertheme_social_media_facebook_control',
             array(
-                'label'    => __( 'Facebook URL', 'writer-theme' ),
+                'label'    => __( 'Facebook URL', 'writerflow' ),
                 'section'  => 'writertheme_social_media_section',
                 'settings' => 'writertheme_social_media_facebook_setting',
                 'type'     => 'text',
@@ -177,7 +144,7 @@ function writertheme_customize_register( $wp_customize ) {
 			$wp_customize,
 			'writertheme_social_media_twitter_control',
 			array(
-				'label'    => __( 'Twitter URL', 'writer-theme' ),
+				'label'    => __( 'Twitter URL', 'writerflow' ),
 				'section'  => 'writertheme_social_media_section',
 				'settings' => 'writertheme_social_media_twitter_setting',
 				'type'     => 'text',
@@ -190,7 +157,7 @@ function writertheme_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'writertheme_about_section',
 		array(
-			'title'    => __( 'Intro text', 'writer-theme' ),
+			'title'    => __( 'Intro text', 'writerflow' ),
 			'priority' => 4,
 		) );
 
@@ -207,7 +174,7 @@ function writertheme_customize_register( $wp_customize ) {
 			$wp_customize,
 			'writertheme_about_text_control',
 			array(
-				'label'    => __( 'Text', 'writer-theme' ),
+				'label'    => __( 'Text', 'writerflow' ),
 				'section'  => 'writertheme_about_section',
 				'settings' => 'writertheme_about_text_setting',
 				'type'     => 'textarea',
@@ -228,7 +195,7 @@ function writertheme_customize_register( $wp_customize ) {
 			$wp_customize,
 			'writertheme_about_button_control',
 			array(
-				'label'    => __( 'Link Text', 'writer-theme' ),
+				'label'    => __( 'Link Text', 'writerflow' ),
 				'section'  => 'writertheme_about_section',
 				'settings' => 'writertheme_about_button_setting',
 				'type'     => 'text',
@@ -249,7 +216,7 @@ function writertheme_customize_register( $wp_customize ) {
 			$wp_customize,
 			'writertheme_about_link_control',
 			array(
-				'label'    => __( 'Link URL', 'writer-theme' ),
+				'label'    => __( 'Link URL', 'writerflow' ),
 				'section'  => 'writertheme_about_section',
 				'settings' => 'writertheme_about_link_setting',
 				'type'     => 'text',
@@ -262,7 +229,7 @@ function writertheme_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'writertheme_related_section',
 		array(
-			'title'    => __( 'Related Articles', 'writer-theme' ),
+			'title'    => __( 'Related Articles', 'writerflow' ),
 			'priority' => 6,
 		)
 	);
@@ -281,8 +248,8 @@ function writertheme_customize_register( $wp_customize ) {
 			$wp_customize,
 			'writertheme_related_control',
 			array(
-				'label'       => __( 'Hide Related Articles', 'writer-theme' ),
-				'description' => __( 'Check to hide the related posts section on single article page.', 'writer-theme' ),
+				'label'       => __( 'Hide Related Articles', 'writerflow' ),
+				'description' => __( 'Check to hide the related posts section on single article page.', 'writerflow' ),
 				'section'     => 'writertheme_related_section',
 				'settings'    => 'writertheme_related_setting',
 				'type'        => 'checkbox',
@@ -304,7 +271,7 @@ function writertheme_customize_register( $wp_customize ) {
 			$wp_customize,
 			'writertheme_related_title_control',
 			array(
-				'label'    => __( 'Related posts title', 'writer-theme' ),
+				'label'    => __( 'Related posts title', 'writerflow' ),
 				'section'  => 'writertheme_related_section',
 				'settings' => 'writertheme_related_title_setting',
 				'type'     => 'text',

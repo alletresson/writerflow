@@ -83,15 +83,15 @@ if ( ! function_exists( 'writertheme_entry_footer' ) ) {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			// translators: used between list items, there is a space after the comma
-			$tags_list = get_the_tag_list( '', esc_html__( ' ', 'writer-theme' ) );
+			$tags_list = get_the_tag_list( '', esc_html__( ' ', 'writerflow' ) );
 			if ( $tags_list ) {
-				printf( '<span class="tags-links" itemscope itemtype="http://schema.org/keywords">' . esc_html__( ' Tagged %1$s', 'writer-theme' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<span class="tags-links" itemscope itemtype="http://schema.org/keywords">' . esc_html__( ' Tagged %1$s', 'writerflow' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
-			comments_popup_link( esc_html__( 'Leave a comment', 'writer-theme' ), esc_html__( '1 Comment', 'writer-theme' ), esc_html__( '% Comments', 'writer-theme' ) );
+			comments_popup_link( esc_html__( 'Leave a comment', 'writerflow' ), esc_html__( '1 Comment', 'writerflow' ), esc_html__( '% Comments', 'writerflow' ) );
 			echo '</span>';
 		}
 	}
@@ -102,7 +102,7 @@ if ( ! function_exists( 'writertheme_entry_footer' ) ) {
 if ( ! function_exists( 'writertheme_posted_by' ) ) {
 	function writertheme_posted_by() {
 		$byline = sprintf(
-			esc_html_x( 'by %s', 'post author', 'writer-theme' ),
+			esc_html_x( 'by %s', 'post author', 'writerflow' ),
 			'<span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -145,17 +145,17 @@ function writertheme_posted_on( $args = array() ) {
 	);
 
 	$posted_on = sprintf(
-		esc_html( '%s', 'post date', 'writer-theme' ),
+		esc_html( '%s', 'post date', 'writerflow' ),
 		'<a href="' . esc_url( get_permalink() ) . '">' . $time_string_1 . '</a>'
 	);
 
 	$updated_on = sprintf(
-		esc_html( '%s', 'post date', 'writer-theme' ),
+		esc_html( '%s', 'post date', 'writerflow' ),
 		'<a href="' . esc_url( get_permalink() ) . '">' . $time_string_2 . '</a>'
 	);
 
 	$postedupdated_on = sprintf(
-		esc_html( '%s', 'post date', 'writer-theme' ),
+		esc_html( '%s', 'post date', 'writerflow' ),
 		'<a href="' . esc_url( get_permalink() ) . '">' . $time_string . '</a>'
 	);
 
@@ -215,7 +215,7 @@ function writertheme_post_taxonomies( $taxonomy_name, $args = array() ) {
 		'post_id'        => get_the_ID(),
 		'item_class'     => '',
 		'item_separator' => ' ',
-		'item_title'     => __( 'View all posts in %s', 'writer-theme' ),
+		'item_title'     => __( 'View all posts in %s', 'writerflow' ),
 		'wrapper_tag'    => 'span',
 		'wrapper_class'  => sprintf( 'item__%s', $taxonomy->name )
 	) );

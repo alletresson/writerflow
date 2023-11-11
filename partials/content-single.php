@@ -27,7 +27,7 @@ if ( has_post_thumbnail() ) :
 
 				<?php
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'writer-theme' ),
+					'before' => '<div class="page-links">' . __( 'Pages:', 'writerflow' ),
 					'after'  => '</div>',
 				) ); ?>
 			</div>
@@ -57,7 +57,7 @@ if ( has_post_thumbnail() ) :
 
 				<?php
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'writer-theme' ),
+					'before' => '<div class="page-links">' . __( 'Pages:', 'writerflow' ),
 					'after'  => '</div>',
 				) ); ?>
 			</div>
@@ -82,7 +82,7 @@ else : ?>
 			<?php the_content(); ?>
 
 			<?php wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'writer-theme' ),
+					'before' => '<div class="page-links">' . __( 'Pages:', 'writerflow' ),
 					'after'  => '</div>',
 				)
 			); ?>
