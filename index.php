@@ -8,7 +8,7 @@ if ( have_posts() ) :
 		get_template_part( 'partials/content', get_post_format() );
 	endwhile;
 
-	echo writertheme_pagination(); // the_posts_navigation();
+	echo writerflow_pagination(); // the_posts_navigation();
 
 else :
 	get_template_part( 'partials/content', 'none' );

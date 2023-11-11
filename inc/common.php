@@ -2,15 +2,15 @@
 
 // Custom CSS styles for Live Customizer
 
-function writertheme_custom_customize_enqueue() {
+function writerflow_custom_customize_enqueue() {
 	wp_enqueue_style( 'customizer-css', get_stylesheet_directory_uri() . '/assets/css/customizer.css' );
 }
 
-add_action( 'customize_controls_enqueue_scripts', 'writertheme_custom_customize_enqueue' );
+add_action( 'customize_controls_enqueue_scripts', 'writerflow_custom_customize_enqueue' );
 
 // Posts pagination
 
-function writertheme_pagination() {
+function writerflow_pagination() {
 	global $wp_query;
 
 	$pagination = array(
@@ -28,7 +28,7 @@ function writertheme_pagination() {
 
 // Related posts
 
-function writertheme_related_posts( $args = array() ) {
+function writerflow_related_posts( $args = array() ) {
 	global $post;
 
 	// default args
@@ -78,8 +78,8 @@ function writertheme_related_posts( $args = array() ) {
 
 // Single page entry footer
 
-if ( ! function_exists( 'writertheme_entry_footer' ) ) {
-	function writertheme_entry_footer() {
+if ( ! function_exists( 'writerflow_entry_footer' ) ) {
+	function writerflow_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			// translators: used between list items, there is a space after the comma
@@ -99,8 +99,8 @@ if ( ! function_exists( 'writertheme_entry_footer' ) ) {
 
 // Post author
 
-if ( ! function_exists( 'writertheme_posted_by' ) ) {
-	function writertheme_posted_by() {
+if ( ! function_exists( 'writerflow_posted_by' ) ) {
+	function writerflow_posted_by() {
 		$byline = sprintf(
 			esc_html_x( 'by %s', 'post author', 'writerflow' ),
 			'<span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
@@ -113,8 +113,8 @@ if ( ! function_exists( 'writertheme_posted_by' ) ) {
 
 // Post category
 
-if ( ! function_exists( 'writertheme_posted_cat' ) ) {
-	function writertheme_posted_cat() {
+if ( ! function_exists( 'writerflow_posted_cat' ) ) {
+	function writerflow_posted_cat() {
 		foreach ( ( get_the_category() ) as $category ) {
 			echo '<a href="' . get_category_link( $category ) . '" class="category-name" itemprop="articleSection">' . $category->cat_name . '</a> ';
 		}
@@ -123,7 +123,7 @@ if ( ! function_exists( 'writertheme_posted_cat' ) ) {
 
 // Post date
 
-function writertheme_posted_on( $args = array() ) {
+function writerflow_posted_on( $args = array() ) {
 
 	$time_string = '<time class="entry-date published updated" datetime="%1$s" itemprop="datePublished">%2$s</time>';
 	$time_string_1 = '<time class="entry-date published" datetime="%1$s" itemprop="datePublished">%2$s</time>';
@@ -173,12 +173,12 @@ function writertheme_posted_on( $args = array() ) {
  *
  * @return
  */
-function writertheme_autoloader( $class_name ) {
-	if ( 0 !== strpos( $class_name, 'writertheme_' ) ) {
+function writerflow_autoloader( $class_name ) {
+	if ( 0 !== strpos( $class_name, 'writerflow_' ) ) {
 		return;
 	}
 
-	$file_name = str_replace( array( 'writertheme_', '_' ), array( '', '-' ), strtolower( $class_name ) );
+	$file_name = str_replace( array( 'writerflow_', '_' ), array( '', '-' ), strtolower( $class_name ) );
 	$file_path = get_template_directory() . '/inc/class-' . $file_name . '.php';
 
 	if ( ! file_exists( $file_path ) ) {
@@ -190,8 +190,8 @@ function writertheme_autoloader( $class_name ) {
 
 // Portfolio post category
 
-function writertheme_portfolio_categories( $args = array() ) {
-	writertheme_post_taxonomies( 'portfolio_category', $args );
+function writerflow_portfolio_categories( $args = array() ) {
+	writerflow_post_taxonomies( 'portfolio_category', $args );
 }
 
 /**
@@ -202,7 +202,7 @@ function writertheme_portfolio_categories( $args = array() ) {
  *
  * @return
  */
-function writertheme_post_taxonomies( $taxonomy_name, $args = array() ) {
+function writerflow_post_taxonomies( $taxonomy_name, $args = array() ) {
 	// check taxonomy
 	$taxonomy = get_taxonomy( $taxonomy_name );
 

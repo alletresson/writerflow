@@ -1,8 +1,8 @@
-<?php if (!empty($related_posts) && !get_theme_mod('writertheme_related_setting')) { ?>
-    <div class="widget writertheme-related-posts">
+<?php if (!empty($related_posts) && !get_theme_mod('writerflow_related_setting')) { ?>
+    <div class="widget writerflow-related-posts">
         <?php
-        if (get_theme_mod('writertheme_related_title_setting')) { ?>
-            <h4 class="widget-title"><?php echo esc_html(get_theme_mod('writertheme_related_title_setting')); ?></h4>
+        if (get_theme_mod('writerflow_related_title_setting')) { ?>
+            <h4 class="widget-title"><?php echo esc_html(get_theme_mod('writerflow_related_title_setting')); ?></h4>
 
         <?php } else { ?>
             <h4 class="widget-title"><?php _e('You might also like', 'writerflow'); ?></h4>

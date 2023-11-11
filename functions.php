@@ -6,10 +6,10 @@ if ( ! isset( $content_width ) ) {
 }
 
 // Set version constant
-define( 'WRITERTHEME_VERSION', '1.0' );
+define( 'WRITERFLOW_VERSION', '1.0' );
 
-if ( ! function_exists( 'writertheme_setup' ) ) {
-	function writertheme_setup() {
+if ( ! function_exists( 'writerflow_setup' ) ) {
+	function writerflow_setup() {
 		// Menus
 		register_nav_menus( array(
 			'primary' => __( 'Primary Menu', 'writerflow' ),
@@ -46,11 +46,11 @@ if ( ! function_exists( 'writertheme_setup' ) ) {
 		load_theme_textdomain( 'writerflow', get_template_directory() . '/languages' );
 	}
 }
-add_action( 'after_setup_theme', 'writertheme_setup' );
+add_action( 'after_setup_theme', 'writerflow_setup' );
 
 // Register widget area
 
-function writertheme_widgets_init() {
+function writerflow_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'writerflow' ),
 		'id'            => 'sidebar',
@@ -62,22 +62,22 @@ function writertheme_widgets_init() {
 	) );
 }
 
-add_action( 'widgets_init', 'writertheme_widgets_init' );
+add_action( 'widgets_init', 'writerflow_widgets_init' );
 
 // Enqueue scripts and styles
 
-function writertheme_scripts() {
-	wp_enqueue_style( 'writertheme-style', get_template_directory_uri() . '/style.css', array(), WRITERTHEME_VERSION, "all" );
+function writerflow_scripts() {
+	wp_enqueue_style( 'writerflow-style', get_template_directory_uri() . '/style.css', array(), WRITERFLOW_VERSION, "all" );
 
-	wp_enqueue_script( 'writertheme-customjs', get_template_directory_uri() . '/assets/js/custom-min.js', array('jquery'), WRITERTHEME_VERSION, true );
-	wp_localize_script( 'writertheme-ajax', 'ajax', array( 'url' => admin_url( 'admin-ajax.php' ) ) );
+	wp_enqueue_script( 'writerflow-customjs', get_template_directory_uri() . '/assets/js/custom-min.js', array('jquery'), WRITERFLOW_VERSION, true );
+	wp_localize_script( 'writerflow-ajax', 'ajax', array( 'url' => admin_url( 'admin-ajax.php' ) ) );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 
-add_action( 'wp_enqueue_scripts', 'writertheme_scripts' );
+add_action( 'wp_enqueue_scripts', 'writerflow_scripts' );
 
 // Excerpt Read more link
 function new_excerpt_more($more) {
@@ -89,7 +89,7 @@ add_filter('excerpt_more', 'new_excerpt_more');
 // REQUIRES & CLASS AUTOLOADING
 
 require_once dirname( __FILE__ ) . '/inc/common.php';
-spl_autoload_register( 'writertheme_autoloader' );
+spl_autoload_register( 'writerflow_autoloader' );
 
 // Customizer
 

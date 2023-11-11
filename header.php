@@ -17,8 +17,8 @@
             <nav itemscope itemtype="http://schema.org/SiteNavigationElement" id="mobile-window">
                 <a id="nav-toggle" class="nav-slide-button" href="#">
                     <?php
-                    if (get_theme_mod('writertheme_menu_text_setting')) {
-                        echo esc_url(get_theme_mod('writertheme_menu_text_setting'));
+                    if (get_theme_mod('writerflow_menu_text_setting')) {
+                        echo esc_url(get_theme_mod('writerflow_menu_text_setting'));
                     } else {
                         echo esc_html__('Menu', 'writerflow');
                     } ?>
@@ -51,10 +51,10 @@
     </header>
 
     <?php
-    if ( is_home() && get_theme_mod( 'writertheme_about_text_setting' ) ) { ?>
+    if ( is_home() && get_theme_mod( 'writerflow_about_text_setting' ) ) { ?>
         <div class="widget" id="intro">
-            <?php echo esc_html( get_theme_mod( 'writertheme_about_text_setting' ) ); ?>
-            <a class="nav-link" href="<?php echo esc_url_raw( get_theme_mod( 'writertheme_about_link_setting' ) ); ?>"><?php echo esc_html( get_theme_mod( 'writertheme_about_button_setting' ) ); ?></a>
+            <?php echo esc_html( get_theme_mod( 'writerflow_about_text_setting' ) ); ?>
+            <a class="nav-link" href="<?php echo esc_url_raw( get_theme_mod( 'writerflow_about_link_setting' ) ); ?>"><?php echo esc_html( get_theme_mod( 'writerflow_about_button_setting' ) ); ?></a>
         </div>
     <?php } ?>
 

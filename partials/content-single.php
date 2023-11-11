@@ -1,8 +1,8 @@
 <?php
 if ( has_post_thumbnail() ) :
-	$writertheme_feat_img = get_the_post_thumbnail_url();
+	$writerflow_feat_img = get_the_post_thumbnail_url();
 
-	list( $width, $height ) = getimagesize( $writertheme_feat_img );
+	list( $width, $height ) = getimagesize( $writerflow_feat_img );
 	if ( $width < $height ) { ?>
 		<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
 
@@ -11,7 +11,7 @@ if ( has_post_thumbnail() ) :
 					<?php echo get_the_date(); ?>
 				</div>
 				<div>
-					<?php writertheme_posted_cat(); ?>
+					<?php writerflow_posted_cat(); ?>
 					<a href="<?php echo get_permalink(); ?>">
 						<?php the_title( sprintf( '<h1 class="entry-title" itemprop="headline"><span>', esc_url( get_permalink() ) ), '</span></h3>' ); ?>
 					</a>
@@ -41,7 +41,7 @@ if ( has_post_thumbnail() ) :
 					<?php echo get_the_date(); ?>
 				</div>
 				<div>
-					<?php writertheme_posted_cat(); ?>
+					<?php writerflow_posted_cat(); ?>
 					<a href="<?php echo get_permalink(); ?>">
 						<?php the_title( sprintf( '<h1 class="entry-title" itemprop="headline"><span>', esc_url( get_permalink() ) ), '</span></h3>' ); ?>
 					</a>
@@ -71,7 +71,7 @@ else : ?>
 				<?php echo get_the_date(); ?>
 			</div>
 			<div>
-				<?php writertheme_posted_cat(); ?>
+				<?php writerflow_posted_cat(); ?>
 				<a href="<?php echo get_permalink(); ?>">
 					<?php the_title( sprintf( '<h1 class="entry-title" itemprop="headline"><span>', esc_url( get_permalink() ) ), '</span></h3>' ); ?>
 				</a>

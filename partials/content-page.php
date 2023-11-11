@@ -1,8 +1,8 @@
 <?php
 if ( has_post_thumbnail() ) :
-	$writertheme_feat_img = get_the_post_thumbnail_url();
+	$writerflow_feat_img = get_the_post_thumbnail_url();
 
-	list( $width, $height ) = getimagesize( $writertheme_feat_img );
+	list( $width, $height ) = getimagesize( $writerflow_feat_img );
 	if ( $width < $height ) { ?>
 		<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" id="post-<?php the_ID(); ?>" <?php post_class('grid-item'); ?>>
 
@@ -52,7 +52,7 @@ else : ?>
 	<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" id="post-<?php the_ID(); ?>" <?php post_class('grid-item'); ?>>
 
 		<header class="entry-header">
-			<?php writertheme_posted_cat(); ?>
+			<?php writerflow_posted_cat(); ?>
 			<?php the_title( '<h2 class="entry-title" itemprop="headline">', '</h2>' ); ?>
 		</header>
 
