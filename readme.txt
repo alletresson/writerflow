@@ -11,7 +11,7 @@ Writerflow WordPress Theme, Copyright 2023 sava.io
 Writerflow theme is distributed under the terms of the GNU GPL
 
 == Description ==
-The theme for story writers.
+Writerflow - the theme for your story writing inspiration.
 
 * Responsive layout
 * Retina-ready design
