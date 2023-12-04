@@ -1,2 +1,2 @@
-/*! Version: 1.1 */
+/*! Version: 1.3 */
 jQuery(document).ready((function($){$("#nav-toggle").on("click",(function(e){return $(this).toggleClass("active"),e.preventDefault(),!1}))})),jQuery(window).on("load",(function(){jQuery(".nav-slide-button").on("click",(function(){jQuery(".pull").fadeToggle()})),jQuery(".top-nav ul > li > a").on("click",(function(){jQuery(".pull").fadeToggle(),jQuery("#nav-toggle").toggleClass("active")}))}));

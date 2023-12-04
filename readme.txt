@@ -1,14 +1,14 @@
 === Writerflow ===
-Contributors: alletresson
+Contributors: arnesava
 Tags: blog, two-columns, right-sidebar, grid-layout, custom-background, custom-menu, custom-logo, editor-style, theme-options, threaded-comments, translation-ready
 Requires at least: 6.0
 Tested up to: 6.4
-Stable tag: 1.0
+Stable tag: 1.3
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
-Writer WordPress Theme, Copyright 2020 alletresson.com
-Writer Theme is distributed under the terms of the GNU GPL
+Writerflow WordPress Theme, Copyright 2023 sava.io
+Writerflow theme is distributed under the terms of the GNU GPL
 
 == Description ==
 The theme for story writers.
@@ -44,6 +44,13 @@ The theme for story writers.
 
 == Changelog ==
 
+= 1.3 =
+* Fixed theme name and version in readme.txt file.
+* Updated credits.
+
+= 1.2 =
+* Added license for icons.
+
 = 1.1 =
 * Added Frequently Asked Questions for all the theme options.
 * Corrected theme name in functions names.
@@ -61,3 +68,8 @@ License URI: https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
 Vollkorn
 License: SIL Open Font License (OFL)
 License URI: https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+
+* Icons used in the design (in css in base64)
+Material.io
+License: Apache License 2.0
+License URI: https://www.apache.org/licenses/LICENSE-2.0.html

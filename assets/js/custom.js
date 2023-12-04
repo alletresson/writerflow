@@ -1,5 +1,4 @@
-/*! Version: 1.1 */
-
+/*! Version: 1.3 */
 jQuery(document).ready(function ($) {
 	// Main nav toggle
 	$("#nav-toggle").on('click', function (e) {

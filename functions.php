@@ -6,7 +6,7 @@ if ( ! isset( $content_width ) ) {
 }
 
 // Set version constant
-define( 'WRITERFLOW_VERSION', '1.0' );
+define( 'WRITERFLOW_VERSION', '1.3' );
 
 if ( ! function_exists( 'writerflow_setup' ) ) {
 	function writerflow_setup() {
@@ -38,9 +38,6 @@ if ( ! function_exists( 'writerflow_setup' ) ) {
         add_theme_support( 'wp-block-styles' );
         add_theme_support( 'responsive-embeds' );
         add_theme_support( 'align-wide' );
-
-		// Custom image size for displaying in posts
-		add_image_size( 'article', 580, 700, true );
 
 		// Available for translation
 		load_theme_textdomain( 'writerflow', get_template_directory() . '/languages' );
@@ -80,11 +77,11 @@ function writerflow_scripts() {
 add_action( 'wp_enqueue_scripts', 'writerflow_scripts' );
 
 // Excerpt Read more link
-function new_excerpt_more($more) {
+function writerflow_new_excerpt_more($more) {
     global $post;
     return '<a class="nav-link" href="'. get_permalink($post->ID) . '" title="Read article">read</a>';
 }
-add_filter('excerpt_more', 'new_excerpt_more');
+add_filter('excerpt_more', 'writerflow_new_excerpt_more');
 
 // REQUIRES & CLASS AUTOLOADING
 
