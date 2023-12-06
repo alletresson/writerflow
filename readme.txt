@@ -1,20 +1,19 @@
-=== Writerflow ===
+=== Writermuse ===
 Contributors: arnesava
 Tags: blog, two-columns, right-sidebar, grid-layout, custom-background, custom-menu, custom-logo, editor-style, theme-options, threaded-comments, translation-ready
 Requires at least: 6.0
 Tested up to: 6.4
-Stable tag: 1.3
+Stable tag: 1.5
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
-Writerflow WordPress Theme, Copyright 2023 sava.io
-Writerflow theme is distributed under the terms of the GNU GPL
+Writermuse WordPress Theme, Copyright 2023 arnesava.com
+Writermuse theme is distributed under the terms of the GNU GPL
 
 == Description ==
-Writerflow - the theme for your story writing inspiration.
+Writermuse - the theme for your story writing inspiration.
 
 * Responsive layout
-* Retina-ready design
 * Social Media profiles
 * Custom logo option
 * Custom background option
@@ -43,6 +42,12 @@ Writerflow - the theme for your story writing inspiration.
 2. Add your text in Related Articles section in the "Related posts title".
 
 == Changelog ==
+
+= 1.5 =
+* Updated theme credits.
+
+= 1.4 =
+* Deleted 'Published on' untranslated string.
 
 = 1.3 =
 * Fixed theme name and version in readme.txt file.

@@ -5,12 +5,12 @@ get_header(); ?>
 	<strong style="font-size: 9rem;">404</strong>
 
 	<header class="page-header">
-		<h2 class="page-title"><?php _e( '404 - Page not found', 'writerflow' ); ?></h2>
+		<h2 class="page-title"><?php _e( '404 - Page not found', 'writermuse' ); ?></h2>
 	</header><!-- .page-header -->
 
 	<div class="entry-content">
 		<div class="clearfix"></div>
-		<p><?php _e( 'It looks like nothing was found at this location. Maybe search will help.', 'writerflow' ); ?></p>
+		<p><?php _e( 'It looks like nothing was found at this location. Maybe search will help.', 'writermuse' ); ?></p>
 		<div class="clearfix"><br><br></div>
 
 		<?php get_search_form(); ?>

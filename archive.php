@@ -16,7 +16,7 @@ if ( have_posts() ) :
 	endwhile; ?>
 
     <div class="grid-item pagination__item">
-		<?php  echo writerflow_pagination(); // the_posts_navigation(); ?>
+		<?php  echo writermuse_pagination(); // the_posts_navigation(); ?>
     </div>
 
 <?php

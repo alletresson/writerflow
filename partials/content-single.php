@@ -1,8 +1,8 @@
 <?php
 if ( has_post_thumbnail() ) :
-	$writerflow_feat_img = get_the_post_thumbnail_url();
+	$writermuse_feat_img = get_the_post_thumbnail_url();
 
-	list( $width, $height ) = getimagesize( $writerflow_feat_img );
+	list( $width, $height ) = getimagesize( $writermuse_feat_img );
 	if ( $width < $height ) { ?>
 		<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
 
@@ -11,7 +11,7 @@ if ( has_post_thumbnail() ) :
 					<?php echo get_the_date(); ?>
 				</div>
 				<div>
-					<?php writerflow_posted_cat(); ?>
+					<?php writermuse_posted_cat(); ?>
 					<a href="<?php echo get_permalink(); ?>">
 						<?php the_title( sprintf( '<h1 class="entry-title" itemprop="headline"><span>', esc_url( get_permalink() ) ), '</span></h3>' ); ?>
 					</a>
@@ -27,7 +27,7 @@ if ( has_post_thumbnail() ) :
 
 				<?php
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'writerflow' ),
+					'before' => '<div class="page-links">' . __( 'Pages:', 'writermuse' ),
 					'after'  => '</div>',
 				) ); ?>
 			</div>
@@ -41,7 +41,7 @@ if ( has_post_thumbnail() ) :
 					<?php echo get_the_date(); ?>
 				</div>
 				<div>
-					<?php writerflow_posted_cat(); ?>
+					<?php writermuse_posted_cat(); ?>
 					<a href="<?php echo get_permalink(); ?>">
 						<?php the_title( sprintf( '<h1 class="entry-title" itemprop="headline"><span>', esc_url( get_permalink() ) ), '</span></h3>' ); ?>
 					</a>
@@ -57,7 +57,7 @@ if ( has_post_thumbnail() ) :
 
 				<?php
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'writerflow' ),
+					'before' => '<div class="page-links">' . __( 'Pages:', 'writermuse' ),
 					'after'  => '</div>',
 				) ); ?>
 			</div>
@@ -71,7 +71,7 @@ else : ?>
 				<?php echo get_the_date(); ?>
 			</div>
 			<div>
-				<?php writerflow_posted_cat(); ?>
+				<?php writermuse_posted_cat(); ?>
 				<a href="<?php echo get_permalink(); ?>">
 					<?php the_title( sprintf( '<h1 class="entry-title" itemprop="headline"><span>', esc_url( get_permalink() ) ), '</span></h3>' ); ?>
 				</a>
@@ -82,7 +82,7 @@ else : ?>
 			<?php the_content(); ?>
 
 			<?php wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'writerflow' ),
+					'before' => '<div class="page-links">' . __( 'Pages:', 'writermuse' ),
 					'after'  => '</div>',
 				)
 			); ?>

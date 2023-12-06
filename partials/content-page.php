@@ -1,8 +1,8 @@
 <?php
 if ( has_post_thumbnail() ) :
-	$writerflow_feat_img = get_the_post_thumbnail_url();
+	$writermuse_feat_img = get_the_post_thumbnail_url();
 
-	list( $width, $height ) = getimagesize( $writerflow_feat_img );
+	list( $width, $height ) = getimagesize( $writermuse_feat_img );
 	if ( $width < $height ) { ?>
 		<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" id="post-<?php the_ID(); ?>" <?php post_class('grid-item'); ?>>
 
@@ -19,7 +19,7 @@ if ( has_post_thumbnail() ) :
 
 				<?php
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'writerflow' ),
+					'before' => '<div class="page-links">' . __( 'Pages:', 'writermuse' ),
 					'after'  => '</div>',
 				) ); ?>
 			</div>
@@ -41,7 +41,7 @@ if ( has_post_thumbnail() ) :
 
 				<?php
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'writerflow' ),
+					'before' => '<div class="page-links">' . __( 'Pages:', 'writermuse' ),
 					'after'  => '</div>',
 				) ); ?>
 			</div>
@@ -52,7 +52,7 @@ else : ?>
 	<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" id="post-<?php the_ID(); ?>" <?php post_class('grid-item'); ?>>
 
 		<header class="entry-header">
-			<?php writerflow_posted_cat(); ?>
+			<?php writermuse_posted_cat(); ?>
 			<?php the_title( '<h2 class="entry-title" itemprop="headline">', '</h2>' ); ?>
 		</header>
 
@@ -60,7 +60,7 @@ else : ?>
 			<?php the_content(); ?>
 
 			<?php wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'writerflow' ),
+					'before' => '<div class="page-links">' . __( 'Pages:', 'writermuse' ),
 					'after'  => '</div>',
 				)
 			);

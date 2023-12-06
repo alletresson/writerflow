@@ -8,9 +8,9 @@ if ( have_posts() ) :
 		get_template_part( 'partials/content', 'single' );
 	endwhile;
 
-	echo writerflow_pagination(); // the_posts_navigation();
+	echo writermuse_pagination(); // the_posts_navigation();
 
-	writerflow_related_posts();
+	writermuse_related_posts();
 
 	if ( comments_open() || get_comments_number() ) :
 		comments_template();

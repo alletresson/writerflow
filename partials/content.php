@@ -7,7 +7,7 @@ if ( has_post_thumbnail() ) { ?>
 					<?php echo get_the_date(); ?>
 				</div>
 				<div>
-					<?php writerflow_posted_cat(); ?>
+					<?php writermuse_posted_cat(); ?>
 					<a href="<?php echo get_permalink(); ?>">
 						<?php the_title( sprintf( '<h2 class="entry-title" itemprop="headline"><span>', esc_url( get_permalink() ) ), '</span></h3>' ); ?>
 					</a>
@@ -35,7 +35,7 @@ if ( has_post_thumbnail() ) { ?>
 					<meta itemprop="url" content="<?php echo esc_url( home_url() ); ?>"/>
 	            </span>
 
-				<?php writerflow_posted_on(); ?>
+				<?php writermuse_posted_on(); ?>
 			</footer>
 		</article>
 	</div>
@@ -48,7 +48,7 @@ if ( has_post_thumbnail() ) { ?>
 					<?php echo get_the_date(); ?>
 				</div>
 				<div>
-					<?php writerflow_posted_cat(); ?>
+					<?php writermuse_posted_cat(); ?>
 					<a href="<?php echo get_permalink(); ?>">
 						<?php the_title( sprintf( '<h2 class="entry-title" itemprop="headline"><span>', esc_url( get_permalink() ) ), '</span></h3>' ); ?>
 					</a>
@@ -59,7 +59,7 @@ if ( has_post_thumbnail() ) { ?>
 				<?php the_excerpt(); ?>
 
 				<?php wp_link_pages( array(
-						'before' => '<div class="page-links">' . __( 'Pages:', 'writerflow' ),
+						'before' => '<div class="page-links">' . __( 'Pages:', 'writermuse' ),
 						'after'  => '</div>',
 					)
 				);
@@ -75,7 +75,7 @@ if ( has_post_thumbnail() ) { ?>
 					<meta itemprop="url" content="<?php echo esc_url( home_url() ); ?>"/>
 				</span>
 
-				<?php writerflow_posted_on(); ?>
+				<?php writermuse_posted_on(); ?>
 			</footer>
 		</article>
 	</div>

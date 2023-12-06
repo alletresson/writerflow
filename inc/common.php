@@ -2,15 +2,15 @@
 
 // Custom CSS styles for Live Customizer
 
-function writerflow_custom_customize_enqueue() {
+function writermuse_custom_customize_enqueue() {
 	wp_enqueue_style( 'customizer-css', get_stylesheet_directory_uri() . '/assets/css/customizer.css' );
 }
 
-add_action( 'customize_controls_enqueue_scripts', 'writerflow_custom_customize_enqueue' );
+add_action( 'customize_controls_enqueue_scripts', 'writermuse_custom_customize_enqueue' );
 
 // Posts pagination
 
-function writerflow_pagination() {
+function writermuse_pagination() {
 	global $wp_query;
 
 	$pagination = array(
@@ -28,7 +28,7 @@ function writerflow_pagination() {
 
 // Related posts
 
-function writerflow_related_posts( $args = array() ) {
+function writermuse_related_posts( $args = array() ) {
 	global $post;
 
 	// default args
@@ -78,20 +78,20 @@ function writerflow_related_posts( $args = array() ) {
 
 // Single page entry footer
 
-if ( ! function_exists( 'writerflow_entry_footer' ) ) {
-	function writerflow_entry_footer() {
+if ( ! function_exists( 'writermuse_entry_footer' ) ) {
+	function writermuse_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			// translators: used between list items, there is a space after the comma
-			$tags_list = get_the_tag_list( '', esc_html__( ' ', 'writerflow' ) );
+			$tags_list = get_the_tag_list( '', esc_html__( ' ', 'writermuse' ) );
 			if ( $tags_list ) {
-				printf( '<span class="tags-links" itemscope itemtype="http://schema.org/keywords">' . esc_html__( ' Tagged %1$s', 'writerflow' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<span class="tags-links" itemscope itemtype="http://schema.org/keywords">' . esc_html__( ' Tagged %1$s', 'writermuse' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
-			comments_popup_link( esc_html__( 'Leave a comment', 'writerflow' ), esc_html__( '1 Comment', 'writerflow' ), esc_html__( '% Comments', 'writerflow' ) );
+			comments_popup_link( esc_html__( 'Leave a comment', 'writermuse' ), esc_html__( '1 Comment', 'writermuse' ), esc_html__( '% Comments', 'writermuse' ) );
 			echo '</span>';
 		}
 	}
@@ -99,10 +99,10 @@ if ( ! function_exists( 'writerflow_entry_footer' ) ) {
 
 // Post author
 
-if ( ! function_exists( 'writerflow_posted_by' ) ) {
-	function writerflow_posted_by() {
+if ( ! function_exists( 'writermuse_posted_by' ) ) {
+	function writermuse_posted_by() {
 		$byline = sprintf(
-			esc_html_x( 'by %s', 'post author', 'writerflow' ),
+			esc_html_x( 'by %s', 'post author', 'writermuse' ),
 			'<span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -113,8 +113,8 @@ if ( ! function_exists( 'writerflow_posted_by' ) ) {
 
 // Post category
 
-if ( ! function_exists( 'writerflow_posted_cat' ) ) {
-	function writerflow_posted_cat() {
+if ( ! function_exists( 'writermuse_posted_cat' ) ) {
+	function writermuse_posted_cat() {
 		foreach ( ( get_the_category() ) as $category ) {
 			echo '<a href="' . get_category_link( $category ) . '" class="category-name" itemprop="articleSection">' . $category->cat_name . '</a> ';
 		}
@@ -123,7 +123,7 @@ if ( ! function_exists( 'writerflow_posted_cat' ) ) {
 
 // Post date
 
-function writerflow_posted_on( $args = array() ) {
+function writermuse_posted_on( $args = array() ) {
 
 	$time_string = '<time class="entry-date published updated" datetime="%1$s" itemprop="datePublished">%2$s</time>';
 	$time_string_1 = '<time class="entry-date published" datetime="%1$s" itemprop="datePublished">%2$s</time>';
@@ -145,24 +145,24 @@ function writerflow_posted_on( $args = array() ) {
 	);
 
 	$posted_on = sprintf(
-		esc_html( '%s', 'post date', 'writerflow' ),
+		esc_html( '%s', 'post date', 'writermuse' ),
 		'<a href="' . esc_url( get_permalink() ) . '">' . $time_string_1 . '</a>'
 	);
 
 	$updated_on = sprintf(
-		esc_html( '%s', 'post date', 'writerflow' ),
+		esc_html( '%s', 'post date', 'writermuse' ),
 		'<a href="' . esc_url( get_permalink() ) . '">' . $time_string_2 . '</a>'
 	);
 
 	$postedupdated_on = sprintf(
-		esc_html( '%s', 'post date', 'writerflow' ),
+		esc_html( '%s', 'post date', 'writermuse' ),
 		'<a href="' . esc_url( get_permalink() ) . '">' . $time_string . '</a>'
 	);
 
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		echo '<p class="posted-on">Published on ' . $posted_on . ' &mdash; Last update: ' . $updated_on . '</p>';
+		echo '<p class="posted-on">' . $posted_on . ' &mdash; Last update: ' . $updated_on . '</p>';
 	} else {
-		echo '<p class="posted-on">Published on ' . $postedupdated_on . '</p>';
+		echo '<p class="posted-on">' . $postedupdated_on . '</p>';
 	}
 }
 
@@ -173,12 +173,12 @@ function writerflow_posted_on( $args = array() ) {
  *
  * @return
  */
-function writerflow_autoloader( $class_name ) {
-	if ( 0 !== strpos( $class_name, 'writerflow_' ) ) {
+function writermuse_autoloader( $class_name ) {
+	if ( 0 !== strpos( $class_name, 'writermuse_' ) ) {
 		return;
 	}
 
-	$file_name = str_replace( array( 'writerflow_', '_' ), array( '', '-' ), strtolower( $class_name ) );
+	$file_name = str_replace( array( 'writermuse_', '_' ), array( '', '-' ), strtolower( $class_name ) );
 	$file_path = get_template_directory() . '/inc/class-' . $file_name . '.php';
 
 	if ( ! file_exists( $file_path ) ) {
@@ -190,8 +190,8 @@ function writerflow_autoloader( $class_name ) {
 
 // Portfolio post category
 
-function writerflow_portfolio_categories( $args = array() ) {
-	writerflow_post_taxonomies( 'portfolio_category', $args );
+function writermuse_portfolio_categories( $args = array() ) {
+	writermuse_post_taxonomies( 'portfolio_category', $args );
 }
 
 /**
@@ -202,7 +202,7 @@ function writerflow_portfolio_categories( $args = array() ) {
  *
  * @return
  */
-function writerflow_post_taxonomies( $taxonomy_name, $args = array() ) {
+function writermuse_post_taxonomies( $taxonomy_name, $args = array() ) {
 	// check taxonomy
 	$taxonomy = get_taxonomy( $taxonomy_name );
 
@@ -215,7 +215,7 @@ function writerflow_post_taxonomies( $taxonomy_name, $args = array() ) {
 		'post_id'        => get_the_ID(),
 		'item_class'     => '',
 		'item_separator' => ' ',
-		'item_title'     => __( 'View all posts in %s', 'writerflow' ),
+		'item_title'     => __( 'View all posts in %s', 'writermuse' ),
 		'wrapper_tag'    => 'span',
 		'wrapper_class'  => sprintf( 'item__%s', $taxonomy->name )
 	) );
