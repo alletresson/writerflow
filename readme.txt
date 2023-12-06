@@ -3,7 +3,7 @@ Contributors: arnesava
 Tags: blog, two-columns, right-sidebar, grid-layout, custom-background, custom-menu, custom-logo, editor-style, theme-options, threaded-comments, translation-ready
 Requires at least: 6.0
 Tested up to: 6.4
-Stable tag: 1.5
+Stable tag: 1.6
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -42,6 +42,9 @@ Writermuse - the theme for your story writing inspiration.
 2. Add your text in Related Articles section in the "Related posts title".
 
 == Changelog ==
+
+= 1.6 =
+* Updated theme screenshot image.
 
 = 1.5 =
 * Updated theme credits.

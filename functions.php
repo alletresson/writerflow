@@ -6,7 +6,7 @@ if ( ! isset( $content_width ) ) {
 }
 
 // Set version constant
-define( 'WRITERFLOW_VERSION', '1.5' );
+define( 'WRITERFLOW_VERSION', '1.6' );
 
 if ( ! function_exists( 'writermuse_setup' ) ) {
 	function writermuse_setup() {
@@ -66,7 +66,7 @@ add_action( 'widgets_init', 'writermuse_widgets_init' );
 function writermuse_scripts() {
 	wp_enqueue_style( 'writermuse-style', get_template_directory_uri() . '/style.css', array(), WRITERFLOW_VERSION, "all" );
 
-	wp_enqueue_script( 'writermuse-customjs', get_template_directory_uri() . '/assets/js/custom-min.js', array('jquery'), WRITERFLOW_VERSION, true );
+	wp_enqueue_script( 'writermuse-customjs', get_template_directory_uri() . '/assets/js/custom.min.js', array('jquery'), WRITERFLOW_VERSION, true );
 	wp_localize_script( 'writermuse-ajax', 'ajax', array( 'url' => admin_url( 'admin-ajax.php' ) ) );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
