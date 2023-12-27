@@ -1,38 +1,6 @@
 <?php
 function writermuse_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
-
-	// Theme Texts
-
-	$wp_customize->add_section(
-		'writermuse_texts_section',
-		array(
-			'title'    => __( 'Theme Texts', 'writermuse' ),
-			'priority' => 1,
-		)
-	);
-
-	$wp_customize->add_setting(
-		'writermuse_menu_text_setting',
-		array(
-			'sanitize_callback' => 'sanitize_text_field',
-			'transport'         => 'refresh',
-		)
-	);
-
-	$wp_customize->add_control(
-		new WP_Customize_Control(
-			$wp_customize,
-			'writermuse_menu_text_control',
-			array(
-				'label'         => __( 'Menu text', 'writermuse' ),
-				'description'   => __( 'Default is Menu', 'writermuse' ),
-				'section'       => 'writermuse_texts_section',
-				'settings'      => 'writermuse_menu_text_setting',
-				'type'          => 'text',
-			)
-		)
-	);
 	
 	// Social Media Icons
 

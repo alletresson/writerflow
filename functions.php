@@ -6,7 +6,7 @@ if ( ! isset( $content_width ) ) {
 }
 
 // Set version constant
-define( 'WRITERFLOW_VERSION', '1.6' );
+define( 'WRITERFLOW_VERSION', '1.7' );
 
 if ( ! function_exists( 'writermuse_setup' ) ) {
 	function writermuse_setup() {

@@ -3,7 +3,7 @@ Contributors: arnesava
 Tags: blog, two-columns, right-sidebar, grid-layout, custom-background, custom-menu, custom-logo, editor-style, theme-options, threaded-comments, translation-ready
 Requires at least: 6.0
 Tested up to: 6.4
-Stable tag: 1.6
+Stable tag: 1.7
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -20,10 +20,6 @@ Writermuse - the theme for your story writing inspiration.
 * Optimized for performance
 
 == Frequently Asked Questions ==
-
-= How do I change menu name? =
-1. Open Live Customizer by going to Appearance > Customize.
-2. Add your text in Theme Texts section.
 
 = How do I add the social media icons and links? =
 1. Open Live Customizer by going to Appearance > Customize.
@@ -42,6 +38,12 @@ Writermuse - the theme for your story writing inspiration.
 2. Add your text in Related Articles section in the "Related posts title".
 
 == Changelog ==
+
+= 1.7 =
+* New main nav with submenu support.
+* Fixed long title issue.
+* Fixed logo size issue.
+* Updated theme screenshot image to reflect changes.
 
 = 1.6 =
 * Updated theme screenshot image.

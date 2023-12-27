@@ -14,40 +14,33 @@
 <div id="page">
     <header id="site-header" itemscope itemtype="http://schema.org/WPHeader">
         <div>
-            <nav itemscope itemtype="http://schema.org/SiteNavigationElement" id="mobile-window">
-                <a id="nav-toggle" class="nav-slide-button" href="#">
-                    <?php
-                    if (get_theme_mod('writermuse_menu_text_setting')) {
-                        echo esc_url(get_theme_mod('writermuse_menu_text_setting'));
-                    } else {
-                        echo esc_html__('Menu', 'writermuse');
-                    } ?>
-                    <span></span>
-                </a>
-
-                <?php wp_nav_menu(array(
-                    'theme_location' => 'primary',
-                    'menu_id' => 'primary-menu',
-                    'menu_class' => 'pull clear',
-                    'container' => false,
-                    'depth' => 1
-                )); ?>
-            </nav>
-
-            <div>
-            <?php
-                the_custom_logo();
-                if (!has_custom_logo()) { ?>
-                <a href="<?php echo esc_url(home_url('/')); ?>" rel="home" itemscope itemtype="http://schema.org/Brand">
-                    <h1 class="site-title" itemprop="name"><?php bloginfo('name'); ?></h1>
-                </a>
-            <?php } ?>
-            </div>
+        <?php
+            the_custom_logo();
+            if (!has_custom_logo()) { ?>
+            <a href="<?php echo esc_url(home_url('/')); ?>" rel="home" itemscope itemtype="http://schema.org/Brand">
+                <h1 class="site-title" itemprop="name"><?php bloginfo('name'); ?></h1>
+            </a>
+        <?php } ?>
         </div>
 
         <div>
             <?php get_search_form(); ?>
         </div>
+
+        <nav id="primary-nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
+            <button id="nav-toggle" class="nav-slide-button" aria-label="open">
+            <span><span class="screen-reader-text">Menu</span></span></button>
+            <div id="menu-modal" aria-hidden="true" role="dialog">
+                <button id="nav-close" class="nav-slide-button" aria-label="close"><span><span class="screen-reader-text">Menu</span></span></button>
+                <?php wp_nav_menu( array(
+                    'theme_location' => 'primary',
+                    'menu_id'        => 'primary-menu',
+                    'menu_class'     => 'clear',
+                    'container'      => ''
+                ) ); ?>
+            </div>
+            <div id="modalOverlay" tabindex="-1"></div>
+        </nav>
     </header>
 
     <?php
